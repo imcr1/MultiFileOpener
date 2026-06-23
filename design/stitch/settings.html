@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MultiFileOpener - Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "on-tertiary-fixed": "#2e1126",
+                            "primary-container": "#3f51b5",
+                            "on-secondary-fixed": "#181b2b",
+                            "outline": "#757684",
+                            "tertiary-fixed-dim": "#e8b9d5",
+                            "primary-fixed-dim": "#bac3ff",
+                            "error-container": "#ffdad6",
+                            "surface-dim": "#dcd9de",
+                            "tertiary-fixed": "#ffd8ee",
+                            "surface-variant": "#e4e1e7",
+                            "on-tertiary-container": "#f4c5e1",
+                            "on-secondary-fixed-variant": "#434658",
+                            "on-tertiary-fixed-variant": "#5e3c53",
+                            "surface-tint": "#4355b9",
+                            "on-background": "#1b1b1f",
+                            "tertiary": "#5a384f",
+                            "on-primary": "#ffffff",
+                            "secondary-container": "#e0e1f8",
+                            "surface-container-highest": "#e4e1e7",
+                            "surface-bright": "#fbf8fe",
+                            "surface": "#fbf8fe",
+                            "surface-container-high": "#eae7ed",
+                            "on-tertiary": "#ffffff",
+                            "inverse-surface": "#303034",
+                            "on-surface-variant": "#454652",
+                            "primary": "#24389c",
+                            "on-secondary-container": "#616376",
+                            "inverse-on-surface": "#f3f0f5",
+                            "secondary-fixed": "#e0e1f8",
+                            "secondary": "#5b5d70",
+                            "inverse-primary": "#bac3ff",
+                            "outline-variant": "#c5c5d4",
+                            "on-surface": "#1b1b1f",
+                            "error": "#ba1a1a",
+                            "secondary-fixed-dim": "#c4c5db",
+                            "on-primary-fixed-variant": "#293ca0",
+                            "on-primary-container": "#cacfff",
+                            "on-error-container": "#93000a",
+                            "background": "#fbf8fe",
+                            "on-error": "#ffffff",
+                            "surface-container-low": "#f6f2f8",
+                            "surface-container-lowest": "#ffffff",
+                            "on-primary-fixed": "#00105c",
+                            "surface-container": "#f0edf2",
+                            "tertiary-container": "#744f67",
+                            "on-secondary": "#ffffff",
+                            "primary-fixed": "#dee0ff"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px",
+                            "2xl": "1.75rem"
+                    },
+                    "spacing": {
+                            "margin-tablet": "24px",
+                            "margin-mobile": "16px",
+                            "none": "0",
+                            "gutter": "16px",
+                            "sm": "8px",
+                            "xl": "32px",
+                            "xs": "4px",
+                            "lg": "24px",
+                            "md": "16px",
+                            "safe": "env(safe-area-inset-bottom)"
+                    },
+                    "fontFamily": {
+                            "display-lg": ["Roboto Flex"],
+                            "title-lg": ["Roboto Flex"],
+                            "body-md": ["Roboto Flex"],
+                            "label-sm": ["Roboto Flex"],
+                            "label-lg": ["Roboto Flex"],
+                            "headline-lg-mobile": ["Roboto Flex"],
+                            "body-lg": ["Roboto Flex"],
+                            "title-md": ["Roboto Flex"],
+                            "headline-lg": ["Roboto Flex"]
+                    },
+                    "fontSize": {
+                            "display-lg": ["57px", {"lineHeight": "64px", "letterSpacing": "-0.25px", "fontWeight": "400"}],
+                            "title-lg": ["22px", {"lineHeight": "28px", "fontWeight": "400"}],
+                            "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                            "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500"}],
+                            "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}],
+                            "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "400"}],
+                            "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                            "title-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "500"}],
+                            "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen pb-[calc(80px+env(safe-area-inset-bottom))] md:pb-0">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-dim w-full top-0 sticky z-50 flex justify-between items-center px-margin-mobile md:px-margin-tablet h-16 w-full">
+<button aria-label="Back" class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:opacity-80 text-on-surface dark:text-on-surface">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-title-lg text-title-lg font-medium text-on-surface dark:text-on-surface flex-1 ml-sm">Settings</h1>
+<div class="w-12 h-12"></div> <!-- Spacer for balance -->
+</header>
+<!-- Main Content Canvas -->
+<main class="w-full max-w-2xl mx-auto px-margin-mobile md:px-margin-tablet py-lg flex flex-col gap-xl">
+<!-- Info Banner -->
+<div class="bg-surface-container-low rounded-2xl p-md flex items-start gap-md">
+<span class="material-symbols-outlined text-primary mt-xs fill" data-icon="info">info</span>
+<p class="font-body-md text-body-md text-on-surface-variant flex-1">
+                After each file opens, switch back to this app and the next one opens automatically.
+            </p>
+</div>
+<!-- Target App Selection -->
+<section class="flex flex-col gap-sm">
+<h2 class="font-label-lg text-label-lg text-primary ml-md">TARGET APP</h2>
+<div class="bg-surface-container rounded-2xl p-md flex items-center justify-between">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 bg-error-container text-on-error-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined fill" data-icon="picture_as_pdf">picture_as_pdf</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface">Drive PDF Viewer</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Current default</p>
+</div>
+</div>
+<button class="bg-primary-container text-on-primary-container hover:bg-surface-variant px-md py-sm rounded-full font-label-lg text-label-lg transition-colors active:opacity-80">
+                    Change app
+                </button>
+</div>
+</section>
+<!-- Handoff Mode -->
+<section class="flex flex-col gap-sm">
+<h2 class="font-label-lg text-label-lg text-primary ml-md">HANDOFF MODE</h2>
+<div class="bg-surface-container rounded-2xl p-md flex flex-col gap-md">
+<!-- Segmented Control -->
+<div class="flex bg-surface-container-highest rounded-full p-xs relative isolation-auto w-full max-w-sm">
+<button class="flex-1 py-sm font-label-lg text-label-lg rounded-full bg-secondary-container text-on-secondary-container relative z-10 transition-all duration-200">
+                        Open with (Rec.)
+                    </button>
+<button class="flex-1 py-sm font-label-lg text-label-lg rounded-full text-on-surface-variant hover:bg-surface-variant relative z-10 transition-all duration-200">
+                        Share
+                    </button>
+</div>
+<div class="flex items-start gap-sm ml-xs">
+<span class="material-symbols-outlined text-outline text-[18px] mt-[2px]" data-icon="report">report</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Share can't confirm delivery — Open with is more reliable.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Advance Mode -->
+<section class="flex flex-col gap-sm mb-xl">
+<h2 class="font-label-lg text-label-lg text-primary ml-md">ADVANCE MODE</h2>
+<div class="bg-surface-container rounded-2xl p-md">
+<!-- Segmented Control -->
+<div class="flex bg-surface-container-highest rounded-full p-xs relative isolation-auto w-full max-w-sm">
+<button class="flex-1 py-sm font-label-lg text-label-lg rounded-full bg-secondary-container text-on-secondary-container relative z-10 transition-all duration-200">
+                        Auto
+                    </button>
+<button class="flex-1 py-sm font-label-lg text-label-lg rounded-full text-on-surface-variant hover:bg-surface-variant relative z-10 transition-all duration-200">
+                        Manual
+                    </button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-md ml-xs">
+                    Auto advances to the next file upon returning. Manual requires a tap.
+                </p>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Hidden on MD+, active tab Settings) -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center h-20 pb-safe px-sm bg-surface-container dark:bg-surface-container rounded-t-none md:hidden border-t-0 shadow-[0_-1px_3px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:bg-surface-variant dark:hover:bg-surface-variant rounded-xl transition-all scale-95 duration-100 ease-in-out" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="format_list_numbered">format_list_numbered</span>
+<span class="font-label-sm text-label-sm">Queue</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:bg-surface-variant dark:hover:bg-surface-variant rounded-xl transition-all scale-95 duration-100 ease-in-out" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="history">history</span>
+<span class="font-label-sm text-label-sm">Recent</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:bg-surface-variant dark:hover:bg-surface-variant rounded-xl transition-all scale-95 duration-100 ease-in-out" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="grade">grade</span>
+<span class="font-label-sm text-label-sm">Starred</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary-container text-on-secondary-container dark:text-on-secondary-container rounded-full px-5 py-1 scale-95 duration-100 ease-in-out" href="#">
+<span class="material-symbols-outlined mb-1 fill" data-icon="settings">settings</span>
+<span class="font-label-sm text-label-sm">Settings</span>
+</a>
+</nav>
+<script>
+        // Simple interactive script for segmented controls to show active state visually
+        document.addEventListener('DOMContentLoaded', () => {
+            const setupSegmentedControl = (container) => {
+                const buttons = container.querySelectorAll('button');
+                buttons.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        // Reset all
+                        buttons.forEach(b => {
+                            b.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+                            b.classList.add('text-on-surface-variant', 'hover:bg-surface-variant');
+                        });
+                        // Set active
+                        btn.classList.remove('text-on-surface-variant', 'hover:bg-surface-variant');
+                        btn.classList.add('bg-secondary-container', 'text-on-secondary-container');
+                    });
+                });
+            };
+
+            const controls = document.querySelectorAll('.isolation-auto');
+            controls.forEach(setupSegmentedControl);
+        });
+    </script>
+</body></html>

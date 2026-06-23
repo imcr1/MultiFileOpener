@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Choose target app</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#2e1126",
+                        "primary-container": "#3f51b5",
+                        "on-secondary-fixed": "#181b2b",
+                        "outline": "#757684",
+                        "tertiary-fixed-dim": "#e8b9d5",
+                        "primary-fixed-dim": "#bac3ff",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#dcd9de",
+                        "tertiary-fixed": "#ffd8ee",
+                        "surface-variant": "#e4e1e7",
+                        "on-tertiary-container": "#f4c5e1",
+                        "on-secondary-fixed-variant": "#434658",
+                        "on-tertiary-fixed-variant": "#5e3c53",
+                        "surface-tint": "#4355b9",
+                        "on-background": "#1b1b1f",
+                        "tertiary": "#5a384f",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#e0e1f8",
+                        "surface-container-highest": "#e4e1e7",
+                        "surface-bright": "#fbf8fe",
+                        "surface": "#fbf8fe",
+                        "surface-container-high": "#eae7ed",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#303034",
+                        "on-surface-variant": "#454652",
+                        "primary": "#24389c",
+                        "on-secondary-container": "#616376",
+                        "inverse-on-surface": "#f3f0f5",
+                        "secondary-fixed": "#e0e1f8",
+                        "secondary": "#5b5d70",
+                        "inverse-primary": "#bac3ff",
+                        "outline-variant": "#c5c5d4",
+                        "on-surface": "#1b1b1f",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#c4c5db",
+                        "on-primary-fixed-variant": "#293ca0",
+                        "on-primary-container": "#cacfff",
+                        "on-error-container": "#93000a",
+                        "background": "#fbf8fe",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f6f2f8",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#00105c",
+                        "surface-container": "#f0edf2",
+                        "tertiary-container": "#744f67",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#dee0ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-tablet": "24px",
+                        "margin-mobile": "16px",
+                        "none": "0",
+                        "gutter": "16px",
+                        "sm": "8px",
+                        "xl": "32px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "md": "16px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Roboto Flex"],
+                        "title-lg": ["Roboto Flex"],
+                        "body-md": ["Roboto Flex"],
+                        "label-sm": ["Roboto Flex"],
+                        "label-lg": ["Roboto Flex"],
+                        "headline-lg-mobile": ["Roboto Flex"],
+                        "body-lg": ["Roboto Flex"],
+                        "title-md": ["Roboto Flex"],
+                        "headline-lg": ["Roboto Flex"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["57px", { "lineHeight": "64px", "letterSpacing": "-0.25px", "fontWeight": "400" }],
+                        "title-lg": ["22px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400" }],
+                        "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400" }],
+                        "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .sheet-enter {
+            animation: slideUp 0.3s cubic-bezier(0.2, 0, 0, 1) forwards;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen font-body-md overflow-hidden flex flex-col items-center justify-end relative">
+<!-- Scrim Overlay (Level 3+ Overlays) -->
+<div class="absolute inset-0 bg-on-surface opacity-30 z-40 transition-opacity"></div>
+<!-- Bottom Sheet -->
+<div class="w-full max-w-md bg-surface-container-low rounded-t-[28px] z-50 sheet-enter pb-safe flex flex-col shadow-lg">
+<!-- Drag Handle -->
+<div class="w-full flex justify-center py-sm mt-xs">
+<div class="w-[32px] h-[4px] bg-outline-variant rounded-full"></div>
+</div>
+<!-- Header -->
+<div class="px-margin-mobile py-md">
+<h2 class="font-title-lg text-title-lg text-on-surface">Choose target app</h2>
+</div>
+<!-- App List -->
+<div class="flex flex-col pb-lg px-xs">
+<!-- App Item 1: Drive PDF Viewer -->
+<button class="flex items-center w-full px-margin-mobile py-md hover:bg-surface-container-high transition-colors focus:bg-surface-container-highest active:bg-surface-variant rounded-lg mx-xs outline-none">
+<div class="w-12 h-12 bg-surface-variant rounded-xl flex items-center justify-center mr-md overflow-hidden shrink-0 shadow-sm border border-outline-variant/20">
+<img class="w-full h-full object-cover" data-alt="A clean, modern app icon for a PDF viewer application. The icon features a stylized document or abstract geometric shape representing a file, using a minimal color palette of deep reds and pristine whites, typical of a professional document viewer, set against a solid, light background. The style is flat, corporate, and polished." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu66IW884q1r46AEJYWg5U5qR6R7MVgHe6iOGIO1POD-XYQ6Y_0aAN5XLKW9yKA5iP7TFX4ugFVf89R1u2bFCs8Y9OKVjrljx8AaMeD60hVmZsOA1rSlqKLcHDexFVnnSXdmGnmhfErM6-x9BUEWVx0PXKAIFCPnlph359OtzXSzZaDSfbX-pFf4agdmru7hkPmBUEWlLW9yVzxy2Tm8HO4j_AhA737r6R6Nh81KBvADDp1X1YBsRKc98bDsWT63mca0GoJPD3ivsC"/>
+</div>
+<span class="font-body-lg text-body-lg text-on-surface flex-grow text-left">Drive PDF Viewer</span>
+</button>
+<!-- App Item 2: Adobe Acrobat -->
+<button class="flex items-center w-full px-margin-mobile py-md hover:bg-surface-container-high transition-colors focus:bg-surface-container-highest active:bg-surface-variant rounded-lg mx-xs outline-none">
+<div class="w-12 h-12 bg-surface-variant rounded-xl flex items-center justify-center mr-md overflow-hidden shrink-0 shadow-sm border border-outline-variant/20">
+<img class="w-full h-full object-cover" data-alt="A recognizable, modern app icon for a major PDF editing application. The design showcases a bold, stylized letter 'A' or abstract document icon in a vibrant, signature red hue. The background is a clean white, emphasizing the corporate and professional aesthetic. The style is sharp, flat, and highly legible." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbHJRQoGt7KBC5RiLe8CCY3XapIbhbhauNFPPjQBqLyZKP6FJl6cbbOXhmmmzXrfDDbXN26LxYoGrXL8-BIOHW-Yi2kpWhecK4W_jjXmNlYfrjfkdeMdweML_4OCXvE6j5TC9PvtTHn8FSKDMbqGR2xNNQX2wa2A9eNWz1kLrbbv8F7u3UfxYle4WspFUlMpMzxjMRbb4WNe6w8smiVLJag149oAe3uqkFPrI06m9QQPhUfBH2vtKxSA9bQNwat4CG4BdkQy4JkmvZ"/>
+</div>
+<span class="font-body-lg text-body-lg text-on-surface flex-grow text-left">Adobe Acrobat</span>
+</button>
+<!-- App Item 3: Samsung Print -->
+<button class="flex items-center w-full px-margin-mobile py-md hover:bg-surface-container-high transition-colors focus:bg-surface-container-highest active:bg-surface-variant rounded-lg mx-xs outline-none">
+<div class="w-12 h-12 bg-surface-variant rounded-xl flex items-center justify-center mr-md overflow-hidden shrink-0 shadow-sm border border-outline-variant/20">
+<img class="w-full h-full object-cover" data-alt="A modern app icon for a mobile printing service. The icon depicts a stylized, minimalist printer graphic or paper coming out of a slot. The color scheme is predominantly a cool, corporate blue on a clean white background, reflecting reliability and efficiency. The design is flat, geometric, and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGi-ICbz7EExvNhawiJ8dCAi0yJEoOzkWGE9p-C73tVq_Bd26N14x5GTJcYACqNsNr4D7ip6YUQ16SeyuTxx4JP5jdn_lD7taGiSjjelU8VTpVWyxflPt2kjwY-OzCQZWeAIniG6_19KdyOKN9YORcC-ICyNErQoERjwMfZcr4xPVQxkpAPMkmU6E9X-0NAnFP55XOmclWruXClNFPYf8z62eIQF-KR45fAUUQFJ2GXw5GFW1Z1hOekh3xgSdBmbQ2VVpFh-7EvVrw"/>
+</div>
+<span class="font-body-lg text-body-lg text-on-surface flex-grow text-left">Samsung Print</span>
+</button>
+<!-- App Item 4: Files by Google -->
+<button class="flex items-center w-full px-margin-mobile py-md hover:bg-surface-container-high transition-colors focus:bg-surface-container-highest active:bg-surface-variant rounded-lg mx-xs outline-none">
+<div class="w-12 h-12 bg-surface-variant rounded-xl flex items-center justify-center mr-md overflow-hidden shrink-0 shadow-sm border border-outline-variant/20">
+<img class="w-full h-full object-cover" data-alt="A modern, abstract app icon representing a file management tool. The design features colorful, intersecting geometric shapes or folders in primary colors (blue, red, yellow, green) against a clean white background. The aesthetic is friendly, organized, and unmistakably indicative of a major tech ecosystem. The style is flat and polished." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACk2YBA-xqIY_QarWDBrlGTqNjm4dNAabWTfOt6G3j6U0IYzQpQi0xz0eZG6TnNwqo2nRAwjWxVVN-FBr_X9bprmBKv5we6aeUQdlGeYylOoFoklto_e4yrNuSk4zk7kucX_lGOqjZgeUVPrQbk9C_j9MTFLRQEORN3AyU5uPSCyF184tLd2YnlZ59UjuJc5x_Yo5MhCBWOq_kaK1LGXnwfdK4NgcySx931V9zFmr2PPKK-QmcXplWojOdg2OzEsLhIEZYjPJ552q7"/>
+</div>
+<span class="font-body-lg text-body-lg text-on-surface flex-grow text-left">Files by Google</span>
+</button>
+</div>
+</div>
+</body></html>
