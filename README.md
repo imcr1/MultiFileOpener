@@ -108,10 +108,6 @@ dart run flutter_launcher_icons
 dart run flutter_native_splash:create
 ```
 
-## Before publishing to Play
-
-The release build currently signs with the debug key. Set up a real keystore in `android/app/build.gradle.kts` before any Play Store submission.
-
 ## Credits
 
 Built with Flutter and Material 3. The UI structure started from a Google Stitch design and was rebuilt natively. Icon and splash come from the project's own artwork in indigo (#3F51B5).
