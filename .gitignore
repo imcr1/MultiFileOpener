@@ -50,3 +50,6 @@ app.*.map.json
 # Local scratch / temporary screenshot harnesses (not part of the app).
 lib/screenshot_harness.dart
 /scratch/
+
+# Built distributables (publish via GitHub Releases, not the repo).
+/dist/
